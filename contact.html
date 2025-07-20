@@ -5,6 +5,7 @@
   <title>Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
   <style>
     body.contact-body {
       background-image: url('Psionica.jpg');
@@ -76,6 +77,7 @@
   </style>
 </head>
 <body>
+  <div id="portrait"></div>
   <div class="page-overlay"></div>
   <div class="center-container">
   <div class="main-card">
@@ -162,4 +164,81 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 </body>
+    <script>
+function setup() {
+  // Create canvas and attach to the "portrait" div
+  let cnv = createCanvas(400, 500);
+  cnv.parent("portrait");
+  background(28, 22, 42);
+
+  // --- Face (ellipse) ---
+  fill(220, 200, 165);
+  noStroke();
+  ellipse(200, 180, 140, 180); // face
+
+  // --- Eyes (circles) ---
+  fill(50, 70, 130);
+  ellipse(170, 170, 28, 28); // left eye
+  ellipse(230, 170, 28, 28); // right eye
+  fill(255);
+  ellipse(175, 175, 7, 7); // left eye sparkle
+  ellipse(235, 175, 7, 7); // right eye sparkle
+
+  // --- Glasses (rects & lines) ---
+  stroke(120, 180, 240);
+  strokeWeight(3);
+  noFill();
+  rect(155, 158, 40, 30, 8); // left lens
+  rect(205, 158, 40, 30, 8); // right lens
+  line(195, 172, 205, 172); // bridge
+
+  // --- Smile (arc as line) ---
+  stroke(80, 40, 80);
+  strokeWeight(3);
+  noFill();
+  arc(200, 210, 60, 30, 0, PI);
+
+  // --- Hair (triangle) ---
+  noStroke();
+  fill(55, 37, 20);
+  triangle(200, 85, 130, 170, 270, 170); // main bang
+
+  // --- Ears (rects) ---
+  fill(220, 200, 165);
+  rect(120, 180, 20, 38, 12);
+  rect(260, 180, 20, 38, 12);
+
+  // --- Nose (line + ellipse) ---
+  stroke(140, 90, 80);
+  strokeWeight(2);
+  line(200, 185, 200, 205);
+  noStroke();
+  fill(210, 180, 150);
+  ellipse(200, 207, 20, 10);
+
+  // --- Freckles (points) ---
+  stroke(170, 120, 80);
+  strokeWeight(5);
+  point(190, 215);
+  point(210, 215);
+  point(200, 220);
+
+  // --- Shoulders (rects) ---
+  noStroke();
+  fill(75, 95, 180);
+  rect(120, 300, 160, 50, 24);
+
+  // --- Title and Signature (text) ---
+  fill(255, 202, 255);
+  noStroke();
+  textSize(24);
+  textAlign(CENTER);
+  text("Self Portrait: Kyle Hansen", 200, 370);
+
+  fill(135, 249, 255);
+  textSize(18);
+  textAlign(RIGHT);
+  text("Kyle Hansen", 390, 490); // Signature
+}
+</script>
 </html>
