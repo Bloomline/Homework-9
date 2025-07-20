@@ -66,6 +66,16 @@
       margin-top: 50px;
       text-align: center;
     }
+    .chapter-art {
+      width: 90%;
+      max-width: 480px;
+      display: block;
+      margin: 32px auto;
+      border-radius: 14px;
+      border: 2px solid #8be9fd55;
+      box-shadow: 0 0 36px #2c1a4e99;
+      transition: transform 0.3s;
+    }
     @keyframes pulse {
       0%, 100% {
         text-shadow: 0 0 8px #ff79c6, 0 0 12px #8be9fd;
@@ -102,7 +112,7 @@
       <a href="story.html">Read My Story →</a>
     </p>
   </div>
-  <div id="portrait" class="center-container, main-card"></div>
+  <div id="portrait" class="chapter-art"></div>
   <script>
 document.addEventListener("DOMContentLoaded", function() {
   const form = document.querySelector("form");
