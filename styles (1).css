@@ -1,0 +1,160 @@
+/* 🔮 GLOBAL STRUCTURE */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #eaeaf2;
+  background-color: #0a0f1c;
+  background-image: url('Psionica.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Overlay for readability */
+.page-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(20, 21, 44, 0.54);
+  pointer-events: none;
+  z-index: 1;
+  animation: fadeInOverlay 1.2s ease;
+}
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+body > *:not(.page-overlay) {
+  position: relative;
+  z-index: 2;
+}
+
+.center-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2vw;
+}
+
+.main-card {
+  width: 100%;
+  max-width: 1100px;
+  background: rgba(22, 22, 45, 0.74);
+  border-radius: 18px;
+  border: 2px solid #7df9ff;
+  box-shadow: 0 0 32px #1a1435cc;
+  padding: 42px 38px 30px 38px;
+  margin: 28px 0;
+  backdrop-filter: blur(2.5px) brightness(1.05);
+}
+
+@media (max-width: 800px) {
+  .main-card {
+    padding: 24px 6vw 18px 6vw;
+  }
+}
+
+/* 🌈 Neon Headings & Text Effects */
+.glow-text {
+  color: #ffcaff;
+  text-shadow: 0 0 8px #ff79c6, 0 0 24px #101022;
+}
+
+#main-title {
+  font-size: 2.8em;
+  color: #78f5ff;
+  text-align: center;
+  text-shadow: 0 0 16px #78f5ff, 0 0 32px #2e224d;
+  animation: neonPulse 3.5s infinite ease-in-out;
+}
+
+/* Boxed Highlight */
+.boxed {
+  border: 2px solid #7df9ff;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(22, 22, 45, 0.67);
+  margin: 30px 0;
+  box-shadow: 0 0 16px #10102270;
+}
+
+#footer-note {
+  font-style: italic;
+  color: #888;
+  text-align: right;
+  margin-top: 20px;
+}
+
+/* 🌀 SHARED ELEMENTS */
+a {
+  color: #8be9fd;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #fff68f;
+  text-shadow: 0 0 4px #ffbdf7, 0 0 10px #fff68f70;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto;
+  border: 2px solid #ffbdf7;
+  border-radius: 8px;
+  box-shadow: 0 0 12px #0a0f1c55;
+}
+
+/* 🎴 STORY PAGE BACKGROUND OVERRIDE */
+.story-body {
+  background-image: url('Capital.png') !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+
+/* 🎯 NAVIGATION */
+.nav, .nav-links {
+  margin-top: 50px;
+  text-align: center;
+}
+.nav a, .nav-links a {
+  margin: 0 10px;
+}
+
+/* 🜏 ANIMATIONS */
+@keyframes neonPulse {
+  0% {
+    text-shadow: 0 0 5px #ff79c6, 0 0 10px #ff79c6, 0 0 20px #ff79c6, 0 0 40px #8be9fd;
+    color: #ffbdf7;
+  }
+  50% {
+    text-shadow: 0 0 16px #ffbdf7, 0 0 32px #ffffff;
+    color: #ffffff;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff79c6, 0 0 10px #ff79c6, 0 0 20px #ff79c6, 0 0 40px #8be9fd;
+    color: #ffbdf7;
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 700px) {
+  body {
+    padding: 12px;
+  }
+  #main-title {
+    font-size: 1.6em;
+  }
+  .boxed {
+    font-size: 1em;
+    padding: 8px;
+  }
+}

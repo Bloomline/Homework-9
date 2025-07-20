@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project One: Neon Knights</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body.story-body { /* fallback in case .story-body is missing in CSS */
+      background-image: url('Capital.png');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #0a0f1c;
+    }
+    .story-content {
+      max-width: 680px;
+      margin: 0 auto;
+      background: rgba(20,18,36,0.72);
+      border-radius: 20px;
+      padding: 36px 24px 16px 24px;
+      box-shadow: 0 0 60px #201533cc;
+      position: relative;
+      z-index: 2;
+    }
+    .chapter-art {
+      width: 90%;
+      max-width: 480px;
+      display: block;
+      margin: 32px auto;
+      border-radius: 14px;
+      border: 2px solid #8be9fd55;
+      box-shadow: 0 0 36px #2c1a4e99;
+      transition: transform 0.3s;
+    }
+    .chapter-art:hover {
+      transform: scale(1.5);
+      border-color: #ff79c6;
+    }
+    .chapter-divider {
+      margin: 42px 0 30px 0;
+      border: none;
+      border-top: 2px dashed #7df9ff66;
+      opacity: 0.7;
+    }
+    .sigil {
+      font-size: 1.3em;
+      color: #7df9ff;
+      margin: 36px 0 16px 0;
+      text-align: center;
+      letter-spacing: 0.13em;
+      text-shadow: 0 0 18px #ff79c644;
+      font-weight: bold;
+    }
+    .lore-quote {
+      color: #ffd5fd;
+      font-size: 1.09em;
+      font-style: italic;
+      text-align: center;
+      margin: 24px 0 18px 0;
+      text-shadow: 0 0 7px #ff79c6aa;
+      letter-spacing: 0.01em;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    h1 {
+      animation: neonPulse 3.5s infinite ease-in-out;
+      font-size: 2.5em;
+      margin-bottom: 28px;
+      margin-top: 2px;
+    }
+    h2 {
+      color: #ff79c6;
+      margin-top: 35px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .nav {
+      margin-top: 48px;
+      text-align: center;
+    }
+    .nav a {
+      margin: 0 12px;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+      font-size: 1.12em;
+      color: #ffcaff;
+      text-shadow: 0 0 5px #ff79c6;
+      transition: color 0.18s;
+    }
+    .nav a:hover {
+      color: #fff68f;
+      text-shadow: 0 0 12px #ffbdf7;
+    }
+    @media (max-width: 700px) {
+      .story-content { padding: 12px 4vw; }
+      h1 { font-size: 1.4em; }
+    }
+  </style>
+</head>
+<body class="story-body">
+  <div class="page-overlay"></div>
+  <div class="story-content">
+    <h1 id="main-title" class="glow-text">꧁༺ 𝑵𝑬𝑶𝑵 𝑲𝑵𝑰𝑮𝑯𝑻𝑺 ༻꧂</h1>
+    <div style="font-size: 1.2em" class="lore-quote">
+      𝔅𝔢𝔣𝔬𝔯𝔢 𝔢𝔳𝔢𝔯𝔶𝔱𝔥𝔦𝔫𝔤, 𝔱𝔥𝔢𝔯𝔢 𝔴𝔞𝔰 𝔫𝔬𝔱𝔥𝔦𝔫𝔤...<br>
+      𝔞𝔫𝔡 𝔟𝔢𝔣𝔬𝔯𝔢 𝔱𝔥𝔢𝔯𝔢 𝔴𝔞𝔰 𝔫𝔬𝔱𝔥𝔦𝔫𝔤...<br>
+      𝔱𝔥𝔢𝔯𝔢 𝔴𝔢𝔯𝔢 <strong>𝔪𝔬𝔫𝔰𝔱𝔢𝔯𝔰.</strong>
+    </div>
+    <div class="sigil" style="font-size: 2.6em">⛤</div>
+    <img src="A117.png" alt="Nora" class="chapter-art">
+    <h2 id="main-title" class="glow-text" style="font-size: 1.4em">🪐𝐈𝐍𝐓𝐑𝐎𝐃𝐔𝐂𝐓𝐈𝐎𝐍🪐</h2>
+    <p>
+      On the edge of the far-future Milkdromeda galaxy, where science blurs with sorcery, the Solarian Imperium rules beneath a golden banner. Some thrive, some starve, all are watched by the ever-burning eye.
+    </p>
+    <p>
+      From the shadows rises <strong>Amélie</strong>: code-splicer, reality-breaker, orphan and outlier. Once discarded, she rose from the gutters to one day become whispered into legend, shaped by loss, ambition, and self sacrifice.
+    </p>
+    <p>
+      Her fate twists when she unlocks the heart of a robot named <strong>Ace</strong>. There, she beholds the <em>Divine Code</em>, a living singularity of logic and myth, the nexus of science and magic. Her joke: “How do I reverse entropy?” is answered... with coordinates, a tarot deck that bends reality, and secrets the empire tried to kill.
+    </p>
+    <p>
+      With newfound allies Connor and Vel, Amélie flees with Ace, but every answer bleeds into more riddles. <em>What is the Divine Code? Who else saw it? And what now blooms inside of her brain?</em>
+    </p>
+    <img src="Starmap.jpg" alt="Milkdromeda" class="chapter-art">
+    <h2 id="main-title" class="glow-text" style="font-size: 1.5em">🕊️ 𝐂𝐇𝐎𝐈𝐂𝐄𝐒 🐍</h2>
+    <p>
+      Aboard the prison ship, with system failing and not enough food for masses... only for a handful.<br>
+      Amélie steps to the console, her team behind her. Her hand firm as she jettisons every non-cockpit module. <strong>Thousands die.</strong> Instantly.
+    </p>
+    <p>
+      She sees their faces pressed to the glass as the void claims them.<br>
+      Her first command, and her first murder.<br>
+      Whether impossible choice or negligent mistake, power awakens. And it is hungry.
+    </p>
+
+    <img src="Voidship.png" alt="Voidship" class="chapter-art">
+
+    <div class="sigil" style="font-size: 2.6em">⛧</div>
+
+    <div class="nav">
+      <a href="index.html">← Return Home</a> |
+      <a href="contact.html">Contact Me →</a>
+    </div>
+  </div>
+</body>
+</html>
